@@ -1,0 +1,23 @@
+.mainTitle{
+    font-size: 100px;
+    color: white;
+    text-align: center;
+}
+.enter{
+    text-align: center;
+    background-color: rgba(33, 153, 204, 0.911);
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: inline-flex;
+}
+.enter:hover{
+    background-color: white;
+    color: rgba(33, 153, 204, 0.911);
+}
+.enterButton{
+    text-align: center;
+}

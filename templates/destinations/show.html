@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="header"><span>&#9992;</span> All Destination's <span>&#9992;</span></h1>
+
+<div class="box">
+
+{% for destination in destinations %}
+  <div class="flex-container">
+    <a class="view" href="/destinations/{{destination.id}}">view..</a><br>
+    
+    {{destination.user.name}}<br>
+    Destination: {{destination.city}}<br>
+    Country: {{destination.country}}<br>
+    Visited: {% if destination.visited %}
+    <span>&#9989;</span>
+    {% else %}
+    <span>&#10062;</span>
+    {% endif %}
+
+
+  </div>
+{% endfor %}
+
+</div>
+{% endblock %}

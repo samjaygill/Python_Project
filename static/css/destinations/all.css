@@ -1,0 +1,51 @@
+.header{
+    color:white;
+    text-align: center;
+    font-size: 40px;
+}
+.flex-container{
+    width: 260px;
+    height: 160px;
+    border: 1px;
+    padding: 50px 20px 30px 20px ;
+    margin: 30px 20px 30px 20px ;
+    background-color: rgba(255, 255, 255, 0.222);
+    border-radius: 18px;
+    justify-content: center;
+    font-size: 25px;
+    color: rgba(26, 109, 144, 0.911);
+    display:inline-block;
+    text-align: center;
+}
+
+.trash-button{
+    background:none;
+    border: none;
+}
+.view{
+    text-decoration: none;
+    color: rgba(20, 118, 163, 0.911);
+    font-size: 16px;
+}
+.view:hover{
+    color:rgb(0, 0, 0);
+    text-decoration: underline;
+}
+.viewIndex{
+    text-align: center;
+    font-size: 35px;
+    color: rgba(251, 251, 251, 0.971);
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 8px;
+    width: 290px;
+    height: 350px;
+    border: 1px;
+    background-color:rgba(190, 239, 255, 0.155);
+    border-radius: 16px;
+}
+.viewItem{
+    position:fixed;
+    top:25%;
+    left: 38%;
+}

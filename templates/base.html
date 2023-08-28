@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Travellers Bucketlist</title>
+    <script src="https://kit.fontawesome.com/669ecdbcab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/visited.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/destinations/all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/destinations/tovisit.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/destinations/visited.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a class="home" href="/">Home</a>
+                    <a class="visited" href="/destinations">View Destinations</a>
+                    <a class="all" href="/destinations/add">Add Destination</a>
+                </li>
+                <li class="searchButton"><input class="search" type="text" placeholder="Search destinations..">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>

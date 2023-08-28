@@ -1,0 +1,66 @@
+body {
+    background: url('/static/images/background.jpg');
+}
+
+.home {
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.visited {
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.todo {
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.all {
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.home:hover {
+    text-decoration: underline;
+    color: rgba(8, 8, 90, 0.937);
+}
+
+.visited:hover {
+    text-decoration: underline;
+    color: rgba(8, 8, 90, 0.937);
+}
+
+.todo:hover {
+    text-decoration: underline;
+    color: rgba(8, 8, 90, 0.937);
+}
+
+.all:hover {
+    text-decoration: underline;
+    color: rgba(8, 8, 90, 0.937);
+}
+
+.menu {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.search {
+    border-top: 10px;
+}
+
+.searchButton {
+    text-align: right;
+}
