@@ -1,7 +1,7 @@
 ## TRAVEL BUCKET LIST
 
 #### BRIEF:
-I am building an app to be able to track destinations that I have visited and would like to visit! Also, where other people would be able to add to it to include their destinations.
+I am building an app to be able to track destinations that I have visited and would like to visit! Other people should be able to add their own destinations to the app.
 
 #### MVP:
 - A user should be able to enter the website.
@@ -10,7 +10,7 @@ I am building an app to be able to track destinations that I have visited and wo
 
 #### EXTENSIONS:
 - A user should be able to expand details of a destination to then be able delete it.
-- A user should be able to update a destination that hasnt been visited.
+- A user should be able to update a destination that hasn't been visited.
 - The app should include css.
 
 #### ADVANCED EXTENSIONS:
