@@ -53,8 +53,4 @@ def update(user):
     values = [user.name, user.id]
     run_sql(sql, values)
 
-# def search(name):
-#     sql = "SELECT * FROM users WHERE name = %s"
-#     values = [name]
-#     run_sql(sql, values)
 

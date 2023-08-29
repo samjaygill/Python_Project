@@ -68,7 +68,6 @@ def update_visited(id):
 
 @bucketlist_blueprint.route("/search", methods=["GET", "POST"])
 def search():
-    # destinations = destination_repository.select_all()
     if request.method == 'POST':
         search = request.form["searchBar"]
         destinations = destination_repository.search(search)
