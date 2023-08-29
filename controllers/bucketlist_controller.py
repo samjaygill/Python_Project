@@ -1,31 +1,37 @@
 from flask import Flask, render_template, request, redirect, Blueprint
 from models.destination import Destination
+from models.user import User
 from repositories import destination_repository, user_repository
 import pdb
 
+
 bucketlist_blueprint = Blueprint("Travel Bucketlist", __name__)
+
 
 @bucketlist_blueprint.route('/')
 def bucketlist():
     return render_template('index.html')
 
+
 @bucketlist_blueprint.route('/destinations')
 def destination_to_visit():
-        destinations = destination_repository.select_all()
-        for d in destinations:
-             print(d.__dict__) 
-        return render_template('destinations/show.html', destinations=destinations)
+    destinations = destination_repository.select_all()
+    for d in destinations:
+        print(d.__dict__)
+    return render_template('destinations/show.html', destinations=destinations)
+
 
 @bucketlist_blueprint.route('/destinations/add')
 def add_destination():
     users = user_repository.select_all()
     return render_template('/destinations/new.html', users=users)
 
+
 @bucketlist_blueprint.route("/destinations/new",  methods=['POST'])
 def create_to_visit():
     # pdb.set_trace()
     visited = request.form['visited']
-    city  = request.form['city']
+    city = request.form['city']
     country = request.form['country']
     user_id = request.form['user_id']
     name = user_repository.select(user_id)
@@ -33,15 +39,18 @@ def create_to_visit():
     destination_repository.save(destination)
     return redirect('/destinations')
 
+
 @bucketlist_blueprint.route("/destinations/<id>", methods=['GET'])
 def show_destination(id):
     destination = destination_repository.select(id)
-    return render_template('destinations/index.html', destination = destination)
+    return render_template('destinations/index.html', destination=destination)
+
 
 @bucketlist_blueprint.route('/destinations/<id>/delete', methods=['POST'])
 def delete_destination(id):
     destination_repository.delete(id)
     return redirect('/destinations')
+
 
 @bucketlist_blueprint.route("/destinations/<id>", methods=['POST'])
 def update_visited(id):
@@ -50,15 +59,17 @@ def update_visited(id):
     destination = destination_repository.select(id)
     # modifty the destination visited property to be the opposite of what it originally was
     if destination.visited == True:
-         destination.visited = False
+        destination.visited = False
     else:
-         destination.visited = True
+        destination.visited = True
     destination_repository.update(destination)
     return redirect(f"/destinations/{destination.id}")
 
 
-
-
-
-
-
+@bucketlist_blueprint.route("/search", methods=["GET", "POST"])
+def search():
+    # destinations = destination_repository.select_all()
+    if request.method == 'POST':
+        search = request.form["searchBar"]
+        destinations = destination_repository.search(search)
+    return render_template("destinations/show.html", destinations=destinations)

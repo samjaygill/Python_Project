@@ -4,42 +4,42 @@
 <h1 class="header"><span>&#9992;</span> Add your destination.. <span>&#9992;</span></h1>
 <!-- <h3 class="header2">If you have not visited this destination <a class="click" href='/tovisit/add'>click here</a></h3> -->
 <div class="fullAdd">
-<form action="/destinations/new" method="post">
-    <div class="addDestination">
-      <div style="text-align:center;">
-      <label for="user">Your name:<br></label>
-      <select id="user" name="user_id">
-            {% for user in users %}
-            <option value="{{user.id}}">{{user.name}}</option>
-            {% endfor %}
-      </select>
-      <br>
-      <br>
-      <label for="visited">Have you visited this destination?<br></label>
-      <select id="visited" name="visited">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-      </select>
-</div>
-      <br>
-      <br>
-      <label for="city">City:</label>
-      <input class="city" type="text" id="city" name="city" placeholder="City" >
-<br>
-      <label for="country">Country:</label>
-      <input class="country" type="text" id="country" name="country" placeholder="Country" required>
-<br>
-      <!-- <label for="name">Your name:</label>
+      <form action="/destinations/new" method="post">
+            <div class="addDestination">
+                  <div style="text-align:center;">
+                        <label for="user">Your name:<br></label>
+                        <select id="user" name="user_id">
+                              {% for user in users %}
+                              <option value="{{user.id}}">{{user.name}}</option>
+                              {% endfor %}
+                        </select>
+                        <br>
+                        <br>
+                        <label for="visited">Have you visited this destination?<br></label>
+                        <select id="visited" name="visited">
+                              <option value="true">Yes</option>
+                              <option value="false">No</option>
+                        </select>
+                  </div>
+                  <br>
+                  <br>
+                  <label for="city">City:</label>
+                  <input class="city" type="text" id="city" name="city" placeholder="City">
+                  <br>
+                  <label for="country">Country:</label>
+                  <input class="country" type="text" id="country" name="country" placeholder="Country" required>
+                  <br>
+                  <!-- <label for="name">Your name:</label>
       <input class="name" type="text" id="name" name="name" placeholder="Name"> -->
 
-      
-<br>
-<br>
-     
-            <div class="button"><button class="button2" type="submit">Add</button></div>
-      </div>
-</div>
-  </form>
 
-  
-  {% endblock %}
+                  <br>
+                  <br>
+
+                  <div class="button"><button class="button2" type="submit">Add</button></div>
+            </div>
+</div>
+</form>
+
+
+{% endblock %}

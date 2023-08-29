@@ -15,7 +15,6 @@ I am building an app to be able to track destinations that I have visited and wo
 
 #### ADVANCED EXTENSIONS:
 - A user should be able to search a destination and it returns the details of it.
-- A user should be able to filter the list of destinations.
 
 #### SETUP:
 

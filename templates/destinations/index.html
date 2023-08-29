@@ -5,20 +5,20 @@
 <div class="viewItem">
     <div class="viewIndex">
         <p>Name: {{destination.user.name}}<br>
-        <br>
-        City: {{destination.city}}<br>
-        Country: {{destination.country}}<br>
-        Visited: {% if destination.visited %}
-        <span>&#9989;</span>
-        {% else %}
-        <span>&#10062;</span>
-        {% endif %}
+            <br>
+            City: {{destination.city}}<br>
+            Country: {{destination.country}}<br>
+            Visited: {% if destination.visited %}
+            <span>&#9989;</span>
+            {% else %}
+            <span>&#10062;</span>
+            {% endif %}
 
-        {% if destination.visited == False %}
+            {% if destination.visited == False %}
         <form action="/destinations/{{destination.id}}" method="POST">
             <input type="submit" value="Update to visited">
         </form>
-    </p>
+        </p>
         {% endif %}
 
         <form class="delete-form" action="/destinations/{{destination.id}}/delete" method="POST">
