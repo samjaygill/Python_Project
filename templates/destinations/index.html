@@ -5,7 +5,7 @@
 <div class="viewItem">
     <div class="viewIndex">
         <p>Name: {{destination.user.name}}<br>
-            <br>
+        <br>
         City: {{destination.city}}<br>
         Country: {{destination.country}}<br>
         Visited: {% if destination.visited %}
@@ -13,11 +13,18 @@
         {% else %}
         <span>&#10062;</span>
         {% endif %}
+
+        {% if destination.visited == False %}
+        <form action="/destinations/{{destination.id}}" method="POST">
+            <input type="submit" value="Update to visited">
+        </form>
     </p>
+        {% endif %}
 
         <form class="delete-form" action="/destinations/{{destination.id}}/delete" method="POST">
-            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-</div>
+            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red"
+                    aria-hidden="true"></i></button>
+    </div>
 </div>
 
 {% endblock %}

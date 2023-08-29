@@ -43,6 +43,19 @@ def delete_destination(id):
     destination_repository.delete(id)
     return redirect('/destinations')
 
+@bucketlist_blueprint.route("/destinations/<id>", methods=['POST'])
+def update_visited(id):
+    # pdb.set_trace()
+    # get the destingation I want to update
+    destination = destination_repository.select(id)
+    # modifty the destination visited property to be the opposite of what it originally was
+    if destination.visited == True:
+         destination.visited = False
+    else:
+         destination.visited = True
+    destination_repository.update(destination)
+    return redirect(f"/destinations/{destination.id}")
+
 
 
 
