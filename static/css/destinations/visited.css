@@ -2,6 +2,7 @@
     color:white;
     text-align: center;
     font-size: 40px;
+    margin: 10px 0px;
 }
 .addButton{
     text-align: center;
@@ -31,4 +32,10 @@
 }
 .click:hover{
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .header{
+        font-size: 25px;
+    }
 }

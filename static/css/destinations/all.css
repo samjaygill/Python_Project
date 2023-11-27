@@ -7,7 +7,7 @@
     width: 260px;
     height: 160px;
     border: 1px;
-    padding: 50px 20px 30px 20px ;
+    padding: 30px 20px;
     margin: 30px 20px 30px 20px ;
     background-color: rgba(255, 255, 255, 0.222);
     border-radius: 18px;
@@ -39,13 +39,32 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 8px;
     width: 290px;
-    height: 380px;
+    height: 320px;
     border: 1px;
     background-color:rgba(190, 239, 255, 0.155);
     border-radius: 16px;
 }
 .viewItem{
-    position:fixed;
-    top:25%;
-    left: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+
+@media only screen and (max-width: 600px) {
+.flex-container{
+    margin: 10px 0px;
+    font-size: 20px;
+    height: 130px;
+}
+.view{
+    font-size: 12px;
+}
+
+.viewIndex{
+    font-size: 20px;
+    height: 230px;
+
+}
 }

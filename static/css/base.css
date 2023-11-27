@@ -53,8 +53,9 @@ body {
 .menu {
     list-style-type: none;
     text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin: 0;
+    padding: 0;
+    padding: 5px;
 }
 
 .search {
@@ -63,4 +64,8 @@ body {
 
 .searchButton {
     text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+    
 }

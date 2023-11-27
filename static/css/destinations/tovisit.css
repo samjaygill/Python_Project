@@ -1,8 +1,4 @@
-.header{
-    color:white;
-    text-align: center;
-    font-size: 40px;
-}
+
 .addButton{
     text-align: center;
 }
@@ -21,12 +17,20 @@
     background-color: rgba(33, 153, 204, 0.911);
     font-weight: bold;
 }
+
+.add-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    
+}
 .addDestination{
     width: 290px;
     height: 300px;
     border: 1px;
-    padding: 50px 20px 30px 20px ;
-    margin: 30px 20px 30px 20px ;
+    padding: 50px 30px 30px 30px ;
+    /* margin: 30px 20px 30px 20px ; */
     background-color: rgba(255, 255, 255, 0.222);
     border-radius: 18px;
     justify-content: center;
@@ -65,8 +69,29 @@
     color: rgba(26, 109, 144, 0.911);
     background-color: white;
 }
-.addDestination{
-    position:fixed;
-    top:30%;
-    left: 38%;
+
+@media only screen and (max-width: 600px) {
+    .addDestination {
+        width: 100%;
+        margin: 10px;
+    }
+    .header{
+        font-size: 15px;
+    }
+
+    .visited, .home, .all{
+        font-size: 15px;
+    }
+
+    input#searchBar{
+        margin-top: 10px;
+        width: 120px;
+        padding: 0 1px;
+    }
+    input#submit{
+        margin-top: 10px;
+        width: 50px;
+        font-size: 10px;
+        padding-top: 3px;
+    }
 }

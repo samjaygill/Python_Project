@@ -14,13 +14,29 @@
     border-radius: 6px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: inline-flex;
+    cursor: pointer;
 }
 
 .enter:hover {
     background-color: white;
     color: rgba(33, 153, 204, 0.911);
+    cursor: pointer;
+
 }
 
 .enterButton {
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .mainTitle{
+        /* max-width: 90%; */
+        font-size: 41px;
+        padding-top: 50px;
+    }
+
+    .enter{
+        font-size: 20px;
+        padding: 15px;
+    }
+    }
