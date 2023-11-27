@@ -16,6 +16,7 @@
     color: rgba(26, 109, 144, 0.911);
     display:inline-block;
     text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .trash-button{
