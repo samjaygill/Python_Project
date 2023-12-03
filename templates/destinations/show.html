@@ -8,14 +8,14 @@
   <div class="flex-container">
     <a class="view" href="/destinations/{{destination.id}}">view..</a><br>
 
-    {{destination.user.name}}<br>
+    <p class="details">{{destination.user.name}}<br>
     Destination: {{destination.city}}<br>
     Country: {{destination.country}}<br>
     Visited: {% if destination.visited %}
     <span>&#9989;</span>
     {% else %}
     <span>&#10062;</span>
-    {% endif %}
+    {% endif %}</p>
 
 
   </div>

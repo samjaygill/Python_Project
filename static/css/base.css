@@ -57,6 +57,9 @@ body {
     padding: 0;
     padding: 5px;
 }
+.details{
+    margin: 0;
+}
 
 .search {
     border-top: 10px;
